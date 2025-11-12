@@ -17,7 +17,7 @@ prefix=/prepend-path-here/limenv # <-- where this version will be installed
 mkdir -p ${prefix}
 
 tmp_build_dir=/path-to-temporary-build-directory
-git clone https://github.com/exgalsky/limenv ${tmp_build_dir}
+git clone https://github.com/1cosmologist/limenv ${tmp_build_dir}
 cd ${tmp_build_dir}
 
 unset PYTHONPATH
