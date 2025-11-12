@@ -67,6 +67,7 @@ loadlimenv () {
     if [ ! -z $2 ] ; then branch=$2; fi
 
     export LIMENVVERSION=$branch-$tag
+    export PATH="$skylinepath:$PATH"
 
     module load cray-mpich 
     module use ${limprefix}/${LIMENVVERSION}/modulefiles
