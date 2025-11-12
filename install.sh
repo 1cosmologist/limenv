@@ -6,7 +6,7 @@ while getopts "v" opt; do
 	   ;;
     esac
 done
-echo Starting cmbenv installation at $(date)
+echo Starting limenv installation at $(date)
 SECONDS=0
 
 # Defaults
@@ -32,9 +32,9 @@ export PATH=$CONDADIR/bin:$PATH
 source $CONFIGUREENV
 
 # Set installation directories
-CMBENV=$PREFIX/$CMBENVVERSION
-CONDADIR=$CMBENV/conda
-MODULEDIR=$CMBENV/modulefiles/cmbenv
+LIMENV=$PREFIX/$LIMENVVERSION
+CONDADIR=$LIMENV/conda
+MODULEDIR=$LIMENV/modulefiles/limenv
 
 # Install conda root environment
 echo Installing conda root environment at $(date)
@@ -65,19 +65,19 @@ echo Setting permissions at $(date)
 # chmod -R u=rwX,g=rX,o-rwx $CONDADIR
 
 # Install modulefile
-echo Installing the cmbenv modulefile to $MODULEDIR at $(date)
+echo Installing the limenv modulefile to $MODULEDIR at $(date)
 
 mkdir -p $MODULEDIR
 
-cp $topdir/modulefile.gen cmbenv.module
+cp $topdir/modulefile.gen limenv.module
 
-sed -i 's@_CONDADIR_@'"$CONDADIR"'@g' cmbenv.module
-sed -i 's@_CMBENVVERSION_@'"$CMBENVVERSION"'@g' cmbenv.module
-sed -i 's@_PYVERSION_@'"$PYVERSION"'@g' cmbenv.module
-sed -i 's@_CONDAPRGENV_@'"$CONDAPRGENV"'@g' cmbenv.module
+sed -i 's@_CONDADIR_@'"$CONDADIR"'@g' limenv.module
+sed -i 's@_LIMENVVERSION_@'"$LIMENVVERSION"'@g' limenv.module
+sed -i 's@_PYVERSION_@'"$PYVERSION"'@g' limenv.module
+sed -i 's@_CONDAPRGENV_@'"$CONDAPRGENV"'@g' limenv.module
 
-cp cmbenv.module $MODULEDIR/$CMBENVVERSION
-cp $topdir/cmbenv.modversion $MODULEDIR/.version_$CMBENVVERSION
+cp limenv.module $MODULEDIR/$LIMENVVERSION
+cp $topdir/limenv.modversion $MODULEDIR/.version_$LIMENVVERSION
 
 # chgrp -R $GRP $MODULEDIR
 # chmod -R u=rwX,g=rX,o-rwx $MODULEDIR

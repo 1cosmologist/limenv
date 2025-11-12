@@ -1,22 +1,22 @@
 #%Module###<-magic cookie ####################################################
 ##
-##   CMB -- extragalactic sky modeling environment
+##   LIM -- extragalactic sky modeling environment
 ##
 ##
 # variables for Tcl script use only
-set     version  _CMBENVVERSION_
+set     version  _LIMENVVERSION_
 
-module-whatis "Loads software dependencies for the cmb prototype framework."
+module-whatis "Loads software dependencies for the lim prototype framework."
 
 proc ModulesHelp { } {
   global version
-  puts stderr "\t\t cmb framework software dependencies - Version $version\n"
+  puts stderr "\t\t lim framework software dependencies - Version $version\n"
   puts stderr "\t This loads a conda environment and other compiled"
-  puts stderr "\t software needed by the cmb framework."
+  puts stderr "\t software needed by the lim framework."
   puts stderr ""
 }
 
-conflict cmbenv
+conflict limenv
 
 # This is set by OS python and gives us problems.
 unsetenv PYTHONSTARTUP
@@ -24,8 +24,8 @@ unsetenv PYTHONSTARTUP
 # This is the conda environment location
 prepend-path PATH _CONDADIR_/bin
 setenv PYTHONPATH _CONDADIR_/lib/python_PYVERSION_/site-packages
-setenv CMBENV _CONDADIR_
-setenv CMBENV_VERSION _CMBENVVERSION_
+setenv LIMENV _CONDADIR_
+setenv LIMENV_VERSION _LIMENVVERSION_
 
 # for basemap; see https://github.com/matplotlib/basemap/issues/419
 setenv PROJ_LIB _CONDADIR_/share/proj
