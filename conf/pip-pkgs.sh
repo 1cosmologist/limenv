@@ -7,6 +7,7 @@ pip install --no-cache-dir "jax[cpu]==0.5.3" "jaxlib" -f https://storage.googlea
 # see https://docs.nersc.gov/development/languages/python/parallel-python/
 pip install --force --no-cache-dir --no-binary=mpi4py mpi4py
 pip install cython
+pip install mpsort
 pip install nbodykit[extras]
 
 # git clone git@github.com:1cosmologist/skytools.git skytools
