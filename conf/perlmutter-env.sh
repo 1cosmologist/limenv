@@ -16,7 +16,7 @@ export NTMAKE=8
 # module unload cudatoolkit # ignore the systemwide cudatoolkit to avoid version conflicts
 # module load cudatoolkit/12.2
 # module load cudnn/8.9.3_cuda12
-# module load cray-mpich craype-accel-nvidia80
+module load cray-mpich #craype-accel-nvidia80
 
 export MPICC="cc"  # -target-accel=nvidia80  -shared
 
