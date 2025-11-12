@@ -7,6 +7,8 @@ It contains scripts for installing limenv, an environment for
 running extraglactic sky modeling software under development. Currently
 configured for running healpy and GPU-enabled jax on Perlmutter at NERSC.
 
+#### Recommended use is with the bash macros.
+
 ## Quick start
 
 Install:
@@ -32,7 +34,7 @@ module use ${prefix}/${LIMENVVERSION}/modulefiles
 module load limenv
 ```
 
-Bash convenience functions:
+Bash convenience macros:
 
 ```bash
 limprefix=$SCRATCH/limenv
