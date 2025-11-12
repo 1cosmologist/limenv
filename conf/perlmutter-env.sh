@@ -18,7 +18,7 @@ export NTMAKE=8
 # module load cudnn/8.9.3_cuda12
 # module load cray-mpich craype-accel-nvidia80
 
-export MPICC="cc -shared"  # -target-accel=nvidia80 
+export MPICC="cc"  # -target-accel=nvidia80  -shared
 
 for PRGENV in $(echo gnu intel cray nvidia)
 do
