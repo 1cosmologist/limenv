@@ -4,7 +4,7 @@
 
 This package is a fork of 1cosmologist/cmbenv environment written and maintained by Shamik Ghosh.
 It contains scripts for installing limenv, an environment for
-running extraglactic sky modeling software under development. Currently
+running line intensity mapping simulation and analysis. Currently
 configured for running healpy and GPU-enabled jax on Perlmutter at NERSC.
 
 #### Recommended use is with the bash macros.
