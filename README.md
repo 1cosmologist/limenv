@@ -58,6 +58,7 @@ installlimenv () {
     CONF=perlmutter PKGS=default PREFIX=${limprefix} ./install.sh |& tee install-${LIMENVVERSION}.log
 }
 
+skylinepath=$SCRATCH/skyLine
 loadlimenv () {
     
     tag=0.0.1
@@ -67,10 +68,7 @@ loadlimenv () {
 
     export LIMENVVERSION=$branch-$tag
 
-    module unload cudatoolkit # ignore the systemwide cudatoolkit to avoid version conflicts
-    module load cudatoolkit/12.2
-    module load cudnn/8.9.3_cuda12
-    module load cray-mpich craype-accel-nvidia80
+    module load cray-mpich 
     module use ${limprefix}/${LIMENVVERSION}/modulefiles
     module load limenv
     source ${limprefix}/${LIMENVVERSION}/conda/bin/activate
