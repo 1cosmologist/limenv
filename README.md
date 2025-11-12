@@ -7,7 +7,7 @@ It contains scripts for installing limenv, an environment for
 running line intensity mapping simulation and analysis. Currently
 configured for running healpy and GPU-enabled jax on Perlmutter at NERSC.
 
-#### Recommended use is with the bash macros.
+#### Recommended use of limenv is with the bash macros.
 
 ## Quick start
 
