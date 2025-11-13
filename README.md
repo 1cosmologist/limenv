@@ -5,7 +5,7 @@
 This package is a fork of 1cosmologist/cmbenv environment written and maintained by Shamik Ghosh.
 It contains scripts for installing limenv, an environment for
 running line intensity mapping simulation and analysis. Currently
-configured for running healpy and GPU-enabled jax on Perlmutter at NERSC.
+configured for running healpy and CPU-only jax on Perlmutter at NERSC.
 
 #### Recommended use of limenv is with the bash macros.
 
