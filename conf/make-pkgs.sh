@@ -7,3 +7,4 @@ make
 
 cd $SCRATCH
 git clone git@github.com:kokron/skyLine.git
+mv skyLine SkyLine

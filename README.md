@@ -58,7 +58,7 @@ installlimenv () {
     CONF=perlmutter PKGS=default PREFIX=${limprefix} ./install.sh |& tee install-${LIMENVVERSION}.log
 }
 
-skylinepath=$SCRATCH/skyLine
+skylinepath=$SCRATCH/SkyLine
 loadlimenv () {
     
     tag=0.0.1
@@ -67,11 +67,12 @@ loadlimenv () {
     if [ ! -z $2 ] ; then branch=$2; fi
 
     export LIMENVVERSION=$branch-$tag
-    export PATH="$skylinepath:$PATH"
 
     module load cray-mpich 
     module use ${limprefix}/${LIMENVVERSION}/modulefiles
     module load limenv
     source ${limprefix}/${LIMENVVERSION}/conda/bin/activate
+
+    export PYTHONPATH="$skylinepath:$PYTHONPATH"
 }
 ```
